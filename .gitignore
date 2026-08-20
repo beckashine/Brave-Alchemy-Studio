@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw content-source dumps (not code, kept locally only)
+/About.txt
+/Optional Add-On.txt
+/philosophy.txt
+/design focus.png
