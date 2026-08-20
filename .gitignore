@@ -45,3 +45,6 @@ next-env.d.ts
 /Optional Add-On.txt
 /philosophy.txt
 /design focus.png
+
+# internal working notes, kept locally only
+/CLAUDE.md
