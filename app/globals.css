@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #060706;
+  --surface: #0a0b0a;
+  --border: #1f2a1a;
+  --text-primary: #eaeaea;
+  --text-muted: #9a9a95;
+  --accent: #c8e619;
+  --accent-dim: #8a9e12;
+  --accent-fg: #0a0b06;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text-primary: var(--text-primary);
+  --color-text-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-accent-dim: var(--accent-dim);
+  --color-accent-fg: var(--accent-fg);
+
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+@keyframes cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cursor-blink {
+    animation: none;
+  }
+}
+
+/*
+ * Redesign exploration ("purple mock up") — fully separate token
+ * namespace, scoped under .redesign-theme so it never touches the
+ * tokens/utilities above. See app/redesign/.
+ *
+ * Values sourced from the client's brand style guide
+ * (design focus.png): logo, palette, and type system are the
+ * source of truth here, not the earlier Cormorant/gold-cream draft.
+ */
+.redesign-theme {
+  --rd-bg: #08080f;
+  --rd-surface: #121019;
+  --rd-surface-alt: #17141f;
+  --rd-border: #2a2438;
+  --rd-text-primary: #f5f5f5;
+  --rd-text-muted: #a99bc0;
+  --rd-purple: #8b5cf6;
+  --rd-purple-dim: #6d28d9;
+  --rd-purple-fg: #f5f5f5;
+  --rd-gold: #d4af37;
+}
+
+@theme inline {
+  --color-rd-bg: var(--rd-bg);
+  --color-rd-surface: var(--rd-surface);
+  --color-rd-surface-alt: var(--rd-surface-alt);
+  --color-rd-border: var(--rd-border);
+  --color-rd-text-primary: var(--rd-text-primary);
+  --color-rd-text-muted: var(--rd-text-muted);
+  --color-rd-purple: var(--rd-purple);
+  --color-rd-purple-dim: var(--rd-purple-dim);
+  --color-rd-purple-fg: var(--rd-purple-fg);
+  --color-rd-gold: var(--rd-gold);
+
+  --font-display: var(--font-space-grotesk);
+  --font-rd-sans: var(--font-rd-dm-sans);
+  --font-rd-mono: var(--font-jetbrains-mono);
+}
+
+.redesign-theme {
+  background: var(--rd-bg);
+  color: var(--rd-text-primary);
+  font-family: var(--font-rd-sans), ui-sans-serif, sans-serif;
+}
+
+/* Type scale bumped +5px across every step, scoped to the redesign
+   theme so Tailwind's text-* utilities read larger site-wide without
+   touching every component. */
+.redesign-theme {
+  --text-xs: 1.0625rem;
+  --text-sm: 1.1875rem;
+  --text-base: 1.3125rem;
+  --text-lg: 1.4375rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.8125rem;
+  --text-3xl: 2.1875rem;
+  --text-4xl: 2.5625rem;
+  --text-5xl: 3.3125rem;
+  --text-6xl: 4.0625rem;
+}
