@@ -2,7 +2,7 @@
 
 > Websites for businesses that don't want boring websites.
 
-**Live site:** [www.bravealchemystudio.com](https://www.bravealchemystudio.com)
+**Live site:** [https://brave-alchemy.netlify.app/](https://brave-alchemy.netlify.app/)
 
 Marketing site and client-intake system for a solo web design studio. A single-scroll homepage paired with a multi-step "Start a Project" order form that validates input, blocks spam, and emails real submissions — no third-party form builder or CMS involved.
 
